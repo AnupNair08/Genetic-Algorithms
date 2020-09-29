@@ -1,6 +1,6 @@
 # Genetic-Algorithms (Project work for the course CT-17001)
 
-Genetic Algorithms are a class of heuristics for solving optimization and search based problems based on **Darwin's Theory of Natural Selection.** The crux of the algorithm is "_Fittest survive_" and use this as the central idea in problem solving. The algorithms employ a series of steps like mutation, selection and crossover which eventually runs until there is convergence of the population. The population size remains static and hence the less fit species eventually die and the fitter ones are given opportunity to propogate into the next generation.
+Genetic Algorithms are a class of heuristics for solving optimization and search based problems based on **Darwin's Theory of Natural Selection.** The crux of the algorithm is "_Fittest survive_" and it uses this as the central idea in problem solving. The algorithms employ a series of steps like mutation, selection and crossover which eventually run until there is convergence of the population. The population size remains static and hence the less fit species eventually die and the fitter ones are given opportunity to propogate into the next generation.
 
 ## Biological overview of Genetic Algorithms
 
@@ -33,6 +33,9 @@ Goal state : Desired final state of the problem
 ```
 
 ## Agents specifications to be added soon
+
+##### Agent 1: Word matching 
+The algorithm is used to generate a string pattern by repeatedly doing crossovers and selections. The agent here has to find the target string by deciding for itself which choice of strings will lead to the goal. The initial population is the state space and then the agent does crossovers and mutations to select the fittest from each generation until the goal is reached. We define a fitness function that computes the number of mismatched characters and serves as a heuristic for the problem.
 
 ## Algorithm
 The basic outline of the algorithm is as follows:
