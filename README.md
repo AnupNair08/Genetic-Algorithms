@@ -10,3 +10,5 @@ The idea behind Natural Selection is summarized collectively as follows:
 * These are passed onto the next generation resulting in more mutations due to crossovers.
 * The individuals with superior genes are selected for the next generation.
 * The end result is a set of individuals that have superior genes which evolved over time.
+
+### Agent and problem specification to be added soon
