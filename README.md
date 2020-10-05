@@ -31,7 +31,7 @@ Transition model : Natural Selection(Selection of fittest)
 Goal test : Convergence of population fitness
 Goal state : Desired final state of the problem
 ```
-[flowchart]: https://github.com/AnupNair08/Genetic-Algorithms/raw/master/res/flowchart.png
+<img src = "res/flowchart.jpg"/>
 
 
 ## Agents
