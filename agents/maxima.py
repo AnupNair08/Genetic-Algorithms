@@ -19,7 +19,7 @@ def fitness(genome):
 
 
 # convert binary DNA to decimal and normalize it to a range(0, 10)
-def translateDNA(pop):
+def normDNA(pop):
     return pop.dot(2 ** np.arange(genomeSize)[::-1]) / float(2**genomeSize-1) * rangeVal[1]
 
 
@@ -54,12 +54,12 @@ if __name__ == "__main__":
 
     #Iterate for a set of generations
     for i in range(150):
-        F_values = generateFunc(translateDNA(pop))  
+        F_values = generateFunc(normDNA(pop))  
 
         #Get all the values for the functions and scatter plot them
         if 'sca' in globals(): 
             sca.remove()
-        sca = plt.scatter(translateDNA(pop), F_values, s=200, lw=0, c='green', alpha=0.5); plt.pause(0.05)
+        sca = plt.scatter(normDNA(pop), F_values, s=200, lw=0, c='green', alpha=0.5); plt.pause(0.1)
 
         #Calculate fitness and perform selection, crossover and mutation.
         fitnessVal = fitness(F_values)

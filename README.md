@@ -32,15 +32,18 @@ Goal test : Convergence of population fitness
 Goal state : Desired final state of the problem
 ```
 
-## Agents specifications to be added soon
+## Agents
 
 ##### Agent 1: Word matching 
 The algorithm is used to generate a string pattern by repeatedly doing crossovers and selections. The agent here has to find the target string by deciding for itself which choice of strings will lead to the goal. The initial population is the state space and then the agent does crossovers and mutations to select the fittest from each generation until the goal is reached. We define a fitness function that computes the number of mismatched characters and serves as a heuristic for the problem.
 
 
-##### Agent 2: Function Minima
+##### Agent 2: Function Maxima
 This problem deals with finding a maxima in a function. The state space here is a continuous function that has a set of maximas and minimas and the agent has to find the global maxima of the function.
 Random Population gets a fitness score based on the value of the function that they generate. The value that is greatest in the current population is chosen to mutate and crossover in the next generations. The fitness function calculates the point that produces maximum value in the function in a given population and the selected genes are mutated in the next generation to arrive at the solution.
+
+##### Agent 3: Path Finder
+The agent has to find a path from start state to the goal state by avoiding obstacles. The initial population is a random set of lines(paths) from the starting state whose fitness function is Euclidean distance measured from the goal. We eliminate obstacles by assigning low fitness score to the lines that overlap the obstacles. The fitter paths then crossover and mutate to generate better paths to the goal that maximise the fitness function. The population will converge after a path has been found. 
 
 ## Algorithm
 The basic outline of the algorithm is as follows:
