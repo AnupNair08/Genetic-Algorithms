@@ -30,7 +30,7 @@ def mutate():
 
 def crossover(p1, p2):
     child = ''
-    for _ in range(len(p1)):
+    for i in range(len(p1)):
         p = random.random()
         if(p < 0.5):
             child += p1[i]
@@ -71,7 +71,8 @@ if __name__ == "__main__":
             p2 = random.choice(population[:50])
             newgen.append(crossover(p1, p2))
         population = newgen
-        print(generation, population[0], fitness(population[0]))
+        print(
+            f"Generation: {generation} :  {population[0]}, Fitness: {fitness(population[0])}")
         generation += 1
 
     print("Computed matching string in {} generations" .format(generation))
